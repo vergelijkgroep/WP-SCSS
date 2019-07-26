@@ -168,7 +168,7 @@ $wpscss_compiler = new Wp_Scss(
 function wp_scss_needs_compiling() {
   global $wpscss_compiler;
   $needs_compiling = apply_filters('wp_scss_needs_compiling', $wpscss_compiler->needs_compiling());
-  if ( $needs_compiling ) {
+  if ( $needs_compiling && is_user_logged_in() ) {
     wp_scss_compile();
     wpscss_handle_errors();
   }
