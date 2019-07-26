@@ -23,7 +23,7 @@ class Wp_Scss_Settings
         // This page will be under "Settings"
         add_options_page(
             'Settings Admin', 
-            'WP-SCSS', 
+            'Sassy WP',
             'manage_options', 
             'wpscss_options', 
             array( $this, 'create_admin_page' )
@@ -39,13 +39,13 @@ class Wp_Scss_Settings
         $this->options = get_option( 'wpscss_options' );
         ?>
         <div class="wrap">
-            <h2>WP-SCSS Settings</h2>   
+            <h2>Sassy WP Settings</h2>
             <p>
               <span class="version">Version <em><?php echo get_option('wpscss_version'); ?></em>
               <br/>
               <span class="author">By: <a href="http://connectthink.com" target="_blank">Connect Think</a></span>
               <br/>
-              <span class="repo">Help & Issues: <a href="https://github.com/ConnectThink/WP-SCSS" target="_blank">Github</a></span>
+              <span class="repo">Help & Issues: <a href="https://github.com/vergelijkgroep/sassy-wp/" target="_blank">Github</a></span>
             </p>        
             <form method="post" action="options.php">
             <?php
@@ -216,7 +216,7 @@ class Wp_Scss_Settings
         print 'Choose how you would like SCSS and source maps to be compiled and how you would like the plugin to handle errors';
     }
     public function print_enqueue_info() {
-        print 'WP-SCSS can enqueue your css stylesheets in the header automatically.';
+        print 'Sassy WP can enqueue your css stylesheets in the header automatically.';
     }
 
     /** 

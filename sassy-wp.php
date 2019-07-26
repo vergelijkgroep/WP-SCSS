@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: SassyWP
- * Plugin URI: https://github.com/vergelijkgroep/WP-SCSS
- * Description: Compiles scss files live on WordPress. Fork from the original
+ * Plugin URI: https://github.com/vergelijkgroep/sassy-wp/
+ * Description: Compiles scss files live on WordPress. Fork from the original WP-SCSS plugin
  * Version: 1.3.0
- * Author: Connect Think
- * Author URI: http://connectthink.com
+ * Author: Vergelijkgroep
+ * Author URI: https://www.vergelijkgroep.nl/
  * License: GPLv3
  */
 
@@ -46,7 +46,7 @@ if (!defined('WPSCSS_VERSION_KEY'))
     define('WPSCSS_VERSION_KEY', 'wpscss_version');
 
 if (!defined('WPSCSS_VERSION_NUM'))
-    define('WPSCSS_VERSION_NUM', '1.2.4');
+    define('WPSCSS_VERSION_NUM', '1.3.0');
 
 // Add version to options table
 if ( get_option( WPSCSS_VERSION_KEY ) !== false ) {
@@ -120,7 +120,7 @@ $css_dir_setting = isset($wpscss_options['css_dir']) ? $wpscss_options['css_dir'
 if( $scss_dir_setting == false || $css_dir_setting == false ) {
   function wpscss_settings_error() {
       echo '<div class="error">
-        <p><strong>Wp-Scss</strong> requires both directories be specified. <a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=wpscss_options">Please update your settings.</a></p>
+        <p><strong>Sassy WP</strong> requires both directories be specified. <a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=wpscss_options">Please update your settings.</a></p>
       </div>';
   }
   add_action('admin_notices', 'wpscss_settings_error');
@@ -130,7 +130,7 @@ if( $scss_dir_setting == false || $css_dir_setting == false ) {
 } elseif ( !is_dir(WPSCSS_THEME_DIR . $scss_dir_setting) || !is_dir(WPSCSS_THEME_DIR . $css_dir_setting) ) {
   function wpscss_settings_error() {
       echo '<div class="error">
-        <p><strong>Wp-Scss:</strong> One or more specified directories does not exist. Please create the directories or <a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=wpscss_options">update your settings.</a></p>
+        <p><strong>Sassy WP:</strong> One or more specified directories does not exist. Please create the directories or <a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=wpscss_options">update your settings.</a></p>
       </div>';
   }
   add_action('admin_notices', 'wpscss_settings_error');

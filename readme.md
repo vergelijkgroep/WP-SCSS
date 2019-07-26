@@ -1,4 +1,4 @@
-# WP-SCSS
+# Sassy WP
 #### A lightweight SCSS compiler for Wordpress.
 
 Compiles .scss files on your wordpress install using [lefo's scssphp](https://github.com/leafo/scssphp). Includes settings page for configuring directories, error reporting, compiling options, and auto enqueuing.
