@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: WP-SCSS
- * Plugin URI: https://github.com/ConnectThink/WP-SCSS
- * Description: Compiles scss files live on WordPress.
- * Version: 1.2.4
+ * Plugin Name: SassyWP
+ * Plugin URI: https://github.com/vergelijkgroep/WP-SCSS
+ * Description: Compiles scss files live on WordPress. Fork from the original
+ * Version: 1.3.0
  * Author: Connect Think
  * Author URI: http://connectthink.com
  * License: GPLv3
